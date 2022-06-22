@@ -1,4 +1,6 @@
 import os
+from WordStatsManager import WordStatsManager
+# from WordStatsManager import WordStatsManager
 import click
 
 VALID_FORMATS = ['.csv', '.txt']
@@ -34,7 +36,9 @@ def main(number, output_spec, input_paths):
     # Remember to structure and package your code and tests appropriately.
     # Don't just add _all_ your code here.
     
-    WordStatsManager.print_summary
+
+    WordStatsManager.print_summary(number, output_spec, input_paths)
+
 
 
 if __name__ == '__main__':
