@@ -1,4 +1,4 @@
-from FileFormat import FileFormat
+from FileFormat import Formatting
 
 
 class TextFileFormat(FileFormat):

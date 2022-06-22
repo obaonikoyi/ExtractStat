@@ -33,8 +33,8 @@ def main(number, output_spec, input_paths):
     #TODO add some of your code here
     # Remember to structure and package your code and tests appropriately.
     # Don't just add _all_ your code here.
-
-    pass
+    
+    WordStatsManager.print_summary
 
 
 if __name__ == '__main__':
