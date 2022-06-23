@@ -7,30 +7,34 @@ from Tokenising import *
 
 
 class WordStatsManager:
+    """
+    The WordStatsManager class orchestrates the use case process (reading, tokenising, summarising, formatting, outputting) 
+    """
 
-    def print_summary(number_specified, output_spec, input_paths):
+    # process text files, compute statistics about each file, and produce output in several different formats
+    def process_file_statistiic(number_specified, output_spec, input_paths):
         for output in output_spec:
 
             for path in input_paths:
                 
                 file_cotent = TextFileAccess.open_read(path)
-                token = StringTokenizer.split_text_to_token(file_cotent)
-                number_of_words = SummaryStatistics.number_of_words(token)
-                most_frequent_words = SummaryStatistics.most_frequent_words(token, number_specified)
+                token = Tokenising.split_text_to_token(file_cotent)
+                number_of_words = Summarising.number_of_words(token)
+                most_frequent_words = Summarising.most_frequent_words(token, number_specified)
                 
 
-                """ get format from path"""
+                # get format from path
                 format = get_format_from_path(output)
                 print(format)
                 result =""
                 # If format of file is csv, return summary in csv format
                 if format == '.csv' :
-                    context = FileFormatContext(CSVFileFormat())
+                    context = FormattingContext(CSVFormatting())
                     result = context.do_summary(path, number_of_words, most_frequent_words)
 
                 # If format of file is txt, return summary in text format
                 if format == '.txt' : 
-                    context = FileFormatContext(TextFileFormat())
+                    context = FormattingContext(TextFormatting())
                     result = context.do_summary(path, number_of_words, most_frequent_words)
 
 
