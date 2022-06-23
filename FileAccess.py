@@ -14,12 +14,12 @@ class FileAccess(ABC):
 
 class TextFileAccess(FileAccess):
 
-    def get_file_content(file_name):
+    def open_read(file_name):
         with open(file_name, 'r') as file:
             return file.read() 
 
-    def set_file_content(file_name, write_text):
-        with open(file_name, 'w') as file:
+    def open_write(file_name, write_text):
+        with open(file_name, 'a') as file:
             data = write_text
             file.write(data)
 

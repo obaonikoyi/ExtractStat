@@ -1,6 +1,5 @@
 import os
 from WordStatsManager import WordStatsManager
-# from WordStatsManager import WordStatsManager
 import click
 
 VALID_FORMATS = ['.csv', '.txt']
