@@ -7,28 +7,11 @@ class FileAccess(ABC):
     """
     
     @abstractmethod
-    def open_read(file_path):
+    def open_read(file_path: str):
         pass
 
     @abstractmethod
-    def open_write(file_path, write_text):
-        pass
-
-
-class TextFileAccess(FileAccess):
-    """
-    TextFileAccess class is used to access the '.txt' file 
-    """
-    
-    # returns file content
-    def open_read(file_path: str):
-        with open(file_path, 'r') as file:
-            return file.read() 
-
-    # Appends text to file
     def open_write(file_path: str, write_text: str):
-        with open(file_path, 'a') as file:
-            data = write_text
-            file.write(data)
+        pass
 
 

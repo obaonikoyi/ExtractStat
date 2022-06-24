@@ -1,12 +1,13 @@
 from FileAccess import *
+from TextFileAccess import TextFileAccess
 
 
-def test_get_file_content() -> str:
+def test_open_read() -> str:
     """It should get file content"""
     file_name = "in1.txt"
-    result = TextFileAccess.get_file_content(file_name)
+    result = TextFileAccess.open_read(file_name)
     print(result)
 
 
 
-test_get_file_content()
+test_open_read()

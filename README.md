@@ -15,6 +15,10 @@ The contents of out.txt and out.csv shows the expected output of the program whe
 
     $ python word_statistics_app.py --number=5 --output=out.txt --output=out.csv in1.txt in2.txt
 
+    or
+
+    $ python3 word_statistics_app.py --number=5 --output=out.txt --output=out.csv in1.txt in2.txt
+
 
 ## Prerequisites
 

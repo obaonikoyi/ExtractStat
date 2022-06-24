@@ -17,7 +17,6 @@ def validate_output_paths(_ctx, _param, paths):
         if format not in VALID_FORMATS:
             raise click.BadParameter(f"Output file {path} has an invalid format {format}. Known formats are {', '.join(VALID_FORMATS)}.")
         output_spec[path] = format
-
     return output_spec
 
 
@@ -35,7 +34,7 @@ def main(number, output_spec, input_paths):
     # Remember to structure and package your code and tests appropriately.
     # Don't just add _all_ your code here.
 
-    WordStatsManager.process_file_statistiic(number, output_spec, input_paths)
+    WordStatsManager.compute_summary_statistics(number, output_spec, input_paths)
 
 
 if __name__ == '__main__':

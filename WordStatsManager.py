@@ -1,8 +1,12 @@
 from distutils import text_file
 import os
+from CSVFormatting import CSVFormatting
 from FileAccess import *
 from Formatting import *
+from FormattingContext import FormattingContext
 from Summarising import *
+from TextFileAccess import TextFileAccess
+from TextFormatting import TextFormatting
 from Tokenising import *
 
 
@@ -12,7 +16,7 @@ class WordStatsManager:
     """
 
     # process text files, compute statistics about each file, and produce output in several different formats
-    def process_file_statistiic(number_specified, output_spec, input_paths):
+    def compute_summary_statistics(number_specified: int, output_spec: dict , input_paths: dict):
         for output in output_spec:
 
             for path in input_paths:
